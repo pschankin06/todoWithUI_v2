@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo with UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div class="main">
+        <h2 class="main__form-title">High</h2>
+        <form class="form high" onsubmit="event.preventDefault()" action="#">
+            <div class="input__wrapper">
+                <input type="text" class="main__new-task main__new-task--high" placeholder="Добавить важных дел">
+                <button class="add-button"></button>
+            </div>
+            <div class="task__wrapper">
+                <span class="task__checkbox"></span>
+                <p class="task__text">Вот вам и супер интересная тема.Вы наверняка заметили что ваши файлы с кодом
+                    становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной программы.
+                </p>
+                <button class="delete-button"></button>
+            </div>
+            <div class="task__wrapper">
+                <span class="task__checkbox"></span>
+                <p class="task__text">Сверстать этот TODO list
+                </p>
+                <button class="delete-button"></button>
+            </div>
+            <div class="task__wrapper task__wrapper--done">
+                <span class=" task__checkbox task__checkbox--done"></span>
+                <p class="task__text">Начать делать задачу
+                </p>
+                <button class="delete-button"></button>
+            </div>
+        </form>
+        <h2 class="main__form-title">Low</h2>
+        <form class="form low" onsubmit="event.preventDefault()" action="#">
+            <div class="input__wrapper">
+                <input type="text" class="main__new-task main__new-task--low" placeholder="Добавить">
+                <button class="add-button"></button>
+            </div>
+            <div class="task__wrapper">
+                <span class="task__checkbox"></span>
+                <p class="task__text">Посмотреть ютубчик
+                </p>
+                <button class="delete-button"></button>
+            </div>
+        </form>
+    </div>
+    <div class="task__wrapper template">
+        <span class="task__checkbox"></span>
+        <p class="task__text"></p>
+        <button class="delete-button"></button>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
