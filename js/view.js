@@ -5,6 +5,8 @@ import {
     addTask,
     searchInList
 } from "./main.js";
+import { compareAsc, format } from "../node_modules/date-fns";
+
 
 export const UI_ELEMENTS = {
     DELETE_BUTTONS: document.querySelectorAll('.delete-button'),
@@ -82,7 +84,7 @@ function makeTaskVisible(newTask) {
 }
 
 function addTaskText(taskName, newTaskText) {
-    newTaskText.textContent = taskName.value;
+    newTaskText.textContent = `${format(Date.now(), 'yyyy-MM-dd')} ${taskName.value}`;
 }
 
 function showTask(currentTask, newTask) {
